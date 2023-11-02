@@ -14,7 +14,7 @@ from model.players import initPlayers
 from api.covid import covid_api # Blueprint import api definition
 from api.user import user_api # Blueprint import api definition
 from api.player import player_api
-from api.passion import passion_api
+from api.nflapi import passion_api
 
 
 # setup App pages
