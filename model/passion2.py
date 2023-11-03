@@ -1,9 +1,9 @@
 from flask import Blueprint, jsonify, request
 from flask_restful import Api, Resource
 import random
+from __main__ import app
 
-passion_api = Blueprint('passion_api', __name__, url_prefix='/api/passion')
-api = Api(passion_api)
+api = Api(app)
 
 class API(Resource):
     def get(self):
@@ -23,4 +23,4 @@ def calculate_passion_score(text):
     score = random.randint(0, 100)
     return score
 
-api.add_resource(API, '/')
+api.add_resource(API, '/api/passion2')
