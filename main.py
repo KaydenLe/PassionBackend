@@ -2,19 +2,21 @@ import threading
 
 # import "packages" from flask
 from flask import render_template  # import render_template from "public" flask libraries
+from flask_restful import Api
 
 # import "packages" from "this" project
 from __init__ import app,db  # Definitions initialization
 from model.jokes import initJokes
 from model.users import initUsers
 from model.players import initPlayers
+import model.passion2
 
 
 # setup APIs
 from api.covid import covid_api # Blueprint import api definition
 from api.user import user_api # Blueprint import api definition
 from api.player import player_api
-from api.passion import passion_api
+from api.nflapi import passion_api
 
 
 # setup App pages
